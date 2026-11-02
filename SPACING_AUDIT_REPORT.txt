@@ -1,0 +1,24 @@
+SAT Practice Lab — Reading & Writing Passage/Question Spacing Audit
+Date: November 2, 2026
+Source archive: SAT_Practice_Lab_Full_Source_Content_Audit_Fixed.zip
+
+Change made
+- Increased the CSS spacing above the separated question prompt to 1.5rem (24 px) in the four Reading & Writing assessment pages.
+- No question wording, answer choices, answer keys, explanations, difficulty assignments, scoring logic, navigation logic, or mathematics assessment files were edited.
+
+Coverage checked
+- Information and Ideas: all 100 bank entries were successfully split into passage and prompt.
+- Craft and Structure: all 63 bank entries were successfully split into passage and prompt.
+- Expression of Ideas: all 100 bank entries were successfully split into passage and prompt.
+- Standard English Conventions: all 74 bank entries were successfully split into passage and prompt.
+
+Functional checks
+- Each of the four Reading & Writing assessments started successfully.
+- Completed a simulated 30-question run in each assessment.
+- Each results page contained 30 review entries and 30 answer explanations.
+- Each results page retained the maximum score display of 89 points.
+- No JavaScript page errors occurred during the simulated runs.
+- Main menu retained all eight domains (four Mathematics and four Reading & Writing).
+
+Scope note
+This was a spacing and functional audit, not a full line-by-line verification of every question against its original source PDF. The change was limited to the four Reading & Writing pages' prompt-spacing CSS.
