@@ -21,7 +21,7 @@ const $=id=>document.getElementById(id);
 let used=new Set(),testQuestions=[],current=0,selected=null,answers=[];
 function escapeHtml(s){return String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]))}
 function splitPassageAndPrompt(raw){
- const text=String(raw??'').replace(/—\s*—+/g,'—').split(/\n\s*\n/).map(p=>p.replace(/\s+/g,' ').trim()).filter(Boolean).join('\n\n').trim();
+ const text=String(raw??'').replace(/—\s*—+/g,'—').replace(/\r?\n+/g,' ').replace(/\s+/g,' ').trim();
  const starters=[
   'Which choice','Which quotation','Which question','Which function','Which revision','Which of the following','Which choice best states','Which statement best','As used in the text','As used in','What does the word','What does the phrase','What is the main idea','Taken together','What does','What is','What are','What do','What did','What would','What can','What might','What most strongly','What does the text','What does the passage',
   'Based on the text','Based on the passage','According to the text','According to the passage','Which finding','Which detail','Which statement','Which option','Which conclusion','Which inference','Which claim','Which choice','How does','How do','How is','How would','Why does','Why do','Why is','Why would','The text most strongly suggests','The passage most strongly suggests','The text indicates','The passage indicates','The author most likely','The researchers most likely','If true, which','If true, what','The information in the text','The overall structure','The main purpose','The function of','The underlined portion','The underlined sentence','The underlined words','The best evidence'
